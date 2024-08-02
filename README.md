@@ -22,8 +22,6 @@ In this project, I focused on deploying a Retail Bank's application to the cloud
 - **Purpose:** To enable Jenkins to access the source code stored in GitHub.
 - **Importance:** By connecting Jenkins to GitHub, I ensured that any code changes trigger Jenkins to start building and testing automatically, keeping the code in a deployable state.
   
-![Jenkins Deployment](/images/jenkins-deployment-successful.png)
-
 ### 5. Creating a Multi-Branch Pipeline in Jenkins
 - **Purpose:** This step allows Jenkins to handle different branches for various environments like development, staging, and production.
 - **Importance:** It’s crucial for ensuring that the right code is deployed to the correct environment without errors or mix-ups.
@@ -31,6 +29,8 @@ In this project, I focused on deploying a Retail Bank's application to the cloud
 ### 6. Linking GitHub Repository to Jenkins
 - **Purpose:** Jenkins needs to pull the code from GitHub and know how to build it.
 - **Importance:** This connection is the backbone of the CI/CD pipeline, facilitating a smooth transition from code commits to deployment.
+
+![Jenkins Deployment](/images/jenkins-deployment-successful.png)
 
 ### 7. Deploying the Application to AWS Elastic Beanstalk
 - **Purpose:** AWS Elastic Beanstalk simplifies the deployment and management of the application.
