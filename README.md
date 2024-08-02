@@ -2,7 +2,7 @@
 
 ## PROJECT GOAL
 
-In this project, I focused on deploying a Retail Bank's application to the cloud using AWS Elastic Beanstalk, which is a fully managed service by AWS. Additionally, I set up a CI/CD pipeline with Jenkins to automate the deployment process. The main objective here was to ensure that the application is continuously tested, integrated, and deployed with minimal manual intervention, aiming to streamline the workflow for developers and maintain a smooth operation.
+In this project, the goal was to deploy a Retail Bank's application to the cloud using AWS Elastic Beanstalk, which is a fully managed service by AWS. I set up a CI/CD pipeline with Jenkins to automate the deployment process. The main objective here was to ensure that the application is continuously tested, integrated, and deployed with minimal manual intervention, aiming to streamline the workflow for developers and maintain a smooth operation.
 
 ---
 
