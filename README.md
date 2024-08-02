@@ -21,6 +21,8 @@ In this project, I focused on deploying a Retail Bank's application to the cloud
 ### 4. Configuring Jenkins with GitHub
 - **Purpose:** To enable Jenkins to access the source code stored in GitHub.
 - **Importance:** By connecting Jenkins to GitHub, I ensured that any code changes trigger Jenkins to start building and testing automatically, keeping the code in a deployable state.
+  
+![Jenkins Deployment](/images/jenkins-deployment-successful.png)
 
 ### 5. Creating a Multi-Branch Pipeline in Jenkins
 - **Purpose:** This step allows Jenkins to handle different branches for various environments like development, staging, and production.
