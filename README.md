@@ -4,6 +4,8 @@
 
 In this project, I focused on deploying a Retail Bank's application to the cloud using AWS Elastic Beanstalk, which is a fully managed service by AWS. Additionally, I set up a CI/CD pipeline with Jenkins to automate the deployment process. The main objective here was to ensure that the application is continuously tested, integrated, and deployed with minimal manual intervention, aiming to streamline the workflow for developers and maintain a smooth operation.
 
+---
+
 ## PROJECT STEPS
 
 ### 1. Cloning the Repository
@@ -36,13 +38,34 @@ In this project, I focused on deploying a Retail Bank's application to the cloud
 - **Purpose:** AWS Elastic Beanstalk simplifies the deployment and management of the application.
 - **Importance:** Using Elastic Beanstalk automates tasks like scaling, load balancing, and monitoring, which reduces the operational burden and allows me to focus on other aspects of the deployment.
 
+![Application](/images/application-homepage.png)
+
+---
+
 ## SYSTEM DESIGN DIAGRAM
 
 ![System Design Diagram](/images/cicd-pipeline-system-diagram.png)
 
-### Diagram Details:
 - **Tool Used:** I created the system design diagram using [draw.io](https://app.diagrams.net/).
-- **Diagram Overview:** It visualizes the interactions between the EC2 instance, Jenkins, GitHub, and AWS Elastic Beanstalk, showing how each component connects within the deployment pipeline.
+
+### Overview:
+The diagram illustrates the end-to-end CI/CD pipeline setup for deploying an application using Jenkins and AWS Elastic Beanstalk. Here’s how the system components interact:
+
+1. **GitHub Repository:** The process starts with developers pushing code to the GitHub repository. This repository contains all the source code required for the application.
+
+2. **Jenkins on EC2 Instance:** Jenkins, hosted on an AWS EC2 instance, pulls the latest code from the GitHub repository. The EC2 instance is configured with the necessary security groups to allow communication via SSH, HTTPS, and custom TCP ports.
+
+3. **Build and Test:** Jenkins builds the code and runs automated tests to ensure the code is functioning as expected.
+
+4. **Deployment to AWS Elastic Beanstalk:** Once the code passes the tests, Jenkins deploys the application to AWS Elastic Beanstalk. Elastic Beanstalk manages the application environment, handling tasks like load balancing, auto-scaling, and monitoring.
+
+5. **IAM Roles:** Two IAM roles are depicted in the diagram:
+   - One ensures that Jenkins has the necessary permissions to automate deployments and manage logging.
+   - The other allows Elastic Beanstalk to provision and manage AWS resources securely, enabling the application to run and scale effectively.
+
+This diagram showcases how the CI/CD pipeline automates the process from code commit to deployment, ensuring that the application is always in a deployable state while leveraging the scalability and management features of AWS Elastic Beanstalk.
+
+---
 
 ## ISSUES & TROUBLESHOOTING
 
@@ -51,12 +74,16 @@ In this project, I focused on deploying a Retail Bank's application to the cloud
 - **Solution:** The problem was traced back to the .zip file structure. Removing the parent directory from the .zip before uploading resolved the issue.
 - **Lesson Learned:** Always double-check the directory structure before deploying to avoid such errors.
 
+---
+
 ## OPTIMIZATION INSIGHTS
 
 ### Advantages of Using Managed Services
 - **Scalability:** AWS Elastic Beanstalk scales the infrastructure automatically based on demand, which is a significant advantage.
 - **Cost Efficiency:** Managed services can be cost-effective since AWS handles maintenance, updates, and scaling.
 - **Security:** AWS provides built-in security features, helping to protect the application from potential threats.
+
+---
 
 ### Challenges and Considerations
 - **Vendor Lock-In:** Heavy reliance on a single cloud provider could lead to vendor lock-in.
@@ -67,6 +94,8 @@ In this project, I focused on deploying a Retail Bank's application to the cloud
 ### Downsides of Elastic Beanstalk
 - **Deployment Latency:** Automated deployments might be slower due to the additional layers of abstraction.
 - **Reduced Control:** Elastic Beanstalk abstracts much of the underlying infrastructure, which can be limiting for those who need more granular control.
+
+---
 
 ## FINAL THOUGHTS
 
